@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="a" />
+        <module name="SpringMVC_day_01" />
+        <module name="SpringMVC_day_02" />
+        <module name="SpringMVC_day_02_sysException" />
+        <module name="SpringMVC_day_02_uploads" />
+        <module name="SpringMVC_day_03_ssm" />
+        <module name="Student" />
+        <module name="Test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="a" target="1.7" />
+      <module name="SpringMVC" target="1.7" />
+      <module name="SpringMVC_day_01" target="1.5" />
+      <module name="SpringMVC_day_02" target="1.7" />
+      <module name="SpringMVC_day_02_sysException" target="1.7" />
+      <module name="SpringMVC_day_02_uploads" target="1.7" />
+      <module name="SpringMVC_day_03_ssm" target="1.7" />
+      <module name="SSH_CRUD" target="1.5" />
+      <module name="SSM_Project_Training" target="1.7" />
+      <module name="Student" target="1.7" />
+      <module name="Test" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace是dao的位置-->
+ <mapper namespace="com.cy.mybatis.IDAO.IUserDAO">
+
+    <!--配置查询结果类名和实体属性名对应关系-->
+    <resultMap id="userMap" type="user">
+        <id property="id" column="id"></id>
+
+        <result property="name" column="username"></result>
+
+        <result property="sex" column="sex"></result>
+
+        <result property="address" column="address"></result>
+
+        <result property="birthdat" column="birthday"></result>
+    </resultMap>
+
+    <!--配置默认查询-->
+    <sql id="defalut" >
+        select * from user
+    </sql>
+
+    <!--配置查询所有-->
+    <select id="findAll" resultType="com.cy.mybatis.entity.User">
+        <include refid="defalut"></include><!--使用默认标签-->
+    </select>
+
+
+
+    <!--通过id查询用户-->
+    <select id="findById" parameterType="int" resultMap="userMap">
+        select * from user where id = #{uid} ;
+    </select>
+
+    <!--通过名字模糊查询-->
+    <select id="findByName" parameterType="string" resultMap="userMap">
+        select * from user where name like #{name} ;
+    </select>
+
+
+
+    <!--通过QuerVo条件查询-->
+    <select id="QueryVo"  parameterType="com.cy.mybatis.entity.QueryVo" resultMap="userMap">
+         select * from user where name like #{user.name} ;
+
+    </select>
+
+    <!--根据条件查询-->
+    <select id="findUserByCondition" resultMap="userMap" parameterType="string">
+        select * from user
+        <where>
+            <if test="name != null">
+                and  name = #{name}
+            </if>
+            <if test="sex != null">
+                and sex = #{sex}
+            </if>
+        </where>
+
+    </select>
+    <!--根据queryVo中的id集合查询用户信息-->
+    <select id="findUserInIds" resultMap="userMap" parameterType="queryVo">
+      select * from user
+      <where>
+          <if test="ids != null and ids.size>0 ">
+              <foreach collection="ids" open="and id in (" close=")" item="id" separator=",">
+                  #{id}
+              </foreach>
+
+          </if>
+
+      </where>
+    </select>
+</mapper>

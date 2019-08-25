@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SSH_CRUD:war">
+    <output-path>$PROJECT_DIR$/SSM_Project_Training/SSH_CRUD/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SSH_CRUD</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SSH_CRUD.war">
+      <element id="artifact" artifact-name="SSH_CRUD:war exploded" />
+    </root>
+  </artifact>
+</component>

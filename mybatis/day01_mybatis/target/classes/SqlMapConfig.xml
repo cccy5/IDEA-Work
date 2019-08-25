@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--mybatis的主配置文件-->
+<configuration>
+   <!--读取外部配置文件
+   resource按照类路径的写法指定位置
+   url按照url写法写地址
+   写法： 主机  协议  端口组成 http://localhost:8080/mybatisserver/demoservlet
+   -->
+    <properties resource="jdbc.properties" />
+
+
+    <!--配置别名
+        type:全限定类名
+    -->
+    <!--
+    <typeAliases>
+        <typeAlias type="com.cy.mybatis.entity.User" alias="user"/>
+    </typeAliases>
+    -->
+
+    <!--配置所有实体下的包，类名就是别名不在区分大小写-->
+    <typeAliases>
+        <package name="com.cy.mybatis.entity"></package>
+    </typeAliases>
+
+
+    <!--配置环境-->
+    <environments default="mysql">
+        <!--配置mysql环境-->
+        <environment id="mysql">
+            <!--配置事务的类型-->
+            <transactionManager type="JDBC"></transactionManager>
+           <!--配置数据源（连接池）-->
+            <dataSource type="POOLED">
+                <!--配置连接数据库的四个基本信息-->
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--指定映射配置文件的位置（每个dao对应的映射文件）-->
+    <mappers>
+        <!--
+         <mapper resource="com/cy/mybatis/IDAO/IUserDAO.xml"/>
+      -->
+        <!--package配置dao接口所在的包，当指定了就不需要写resource和class了-->
+        <package name="com.cy.mybatis.IDAO"></package>
+    </mappers>
+</configuration>

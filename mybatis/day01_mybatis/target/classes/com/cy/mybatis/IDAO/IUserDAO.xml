@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace是dao的位置-->
+ <mapper namespace="com.cy.mybatis.IDAO.IUserDAO">
+    <!--配置查询所有-->
+    <select id="findAll" resultType="com.cy.mybatis.entity.User">
+        select * from user  ;
+    </select>
+
+    <!--添加用户-->
+    <insert id="saveUser" parameterType="com.cy.mybatis.entity.User">
+        <!--配置插入数据后获取插入的id
+            keyProperty 插入的id  keyColumn列的id
+        -->
+        <selectKey keyProperty="id" keyColumn="id" resultType="int" order="AFTER" >
+            select last_insert_id() ;
+        </selectKey>
+
+        insert  into user(name,sex,address,birthdat) values (#{name},#{sex},#{address},#{birthdat});
+    </insert>
+
+    <!--修改用户-->
+    <update id="updateUser" parameterType="com.cy.mybatis.entity.User">
+        update user set name = #{name},sex = #{sex} ,address = #{address},birthdat = #{birthdat} where id = #{id} ;
+    </update>
+
+    <!--删除用户-->
+    <delete id="delete" parameterType="int">
+        delete from user where id = #{uid}
+    </delete>
+
+    <!--通过id查询用户-->
+    <select id="findById" parameterType="int" resultType="com.cy.mybatis.entity.User">
+        select * from user where id = #{uid} ;
+    </select>
+
+    <!--通过名字模糊查询-->
+    <select id="findByName" parameterType="string" resultType="com.cy.mybatis.entity.User">
+        select * from user where name like #{name} ;
+    </select>
+
+    <!--获取用户的总记录数-->
+    <select id="findTotal" resultType="int">
+        select count(id) from user ;
+    </select>
+
+    <!--通过QuerVo条件查询-->
+    <select id="QueryVo"  parameterType="com.cy.mybatis.entity.QueryVo" resultType="com.cy.mybatis.entity.User">
+         select * from user where name like #{user.name} ;
+
+    </select>
+</mapper>

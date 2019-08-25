@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/IDEA-Work.iml" filepath="$PROJECT_DIR$/.idea/IDEA-Work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM_Project_Training/SSM_Project_Training.iml" filepath="$PROJECT_DIR$/SSM_Project_Training/SSM_Project_Training.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC_day_01/SpringMVC_day_01.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC_day_01/SpringMVC_day_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC_day_02/SpringMVC_day_02.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC_day_02/SpringMVC_day_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC_day_02_sysException/SpringMVC_day_02_sysException.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC_day_02_sysException/SpringMVC_day_02_sysException.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC_day_02_upload/SpringMVC_day_02_uploads.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC_day_02_upload/SpringMVC_day_02_uploads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC_day_03_ssm/SpringMVC_day_03_ssm.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC_day_03_ssm/SpringMVC_day_03_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM_Project_Training/Student/Student.iml" filepath="$PROJECT_DIR$/SSM_Project_Training/Student/Student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM_Project_Training/Test/Test.iml" filepath="$PROJECT_DIR$/SSM_Project_Training/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringMVC/a/a.iml" filepath="$PROJECT_DIR$/SpringMVC/a/a.iml" />
+    </modules>
+  </component>
+</project>

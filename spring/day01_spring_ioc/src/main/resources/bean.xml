@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--吧对象的创建交给spring管理
+    <bean id="userServiceDAOImpl" class="com.cy.service.impl.IuserServiceDAOImpl"></bean>
+
+
+    <bean id="userDAOImpl" class="com.cy.dao.impl.UserDAOImpl"></bean>
+-->
+<bean id="a" class="com.cy.control.n1">
+    <property name="myList">
+        <array>
+            <value>AAA</value>
+            <value>BBB</value>
+            <value>CCC</value>
+        </array>
+    </property>
+    <property name="myStrs">
+        <array>
+            <value>AAA</value>
+            <value>BBB</value>
+            <value>CCC</value>
+        </array>
+    </property>
+
+    <property name="myMap">
+       <map>
+           <entry key="aa" value="aa"></entry>
+           <entry key="bb" value="bb"></entry>
+           <entry key="cc" value="cc"></entry>
+       </map>
+    </property>
+</bean>
+
+  <!---
+    <bean id="a" class="com.cy.control.n1">
+        <property name="myStrs">
+            <set>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </set>
+        </property>
+
+        <property name="myList">
+            <array>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </array>
+        </property>
+
+        <property name="mySet">
+            <list>
+                <value>AAA</value>
+                <value>BBB</value>
+                <value>CCC</value>
+            </list>
+        </property>
+
+        <property name="myMap">
+            <props>
+                <prop key="testC">ccc</prop>
+                <prop key="testD">ddd</prop>
+            </props>
+        </property>
+
+        <property name="myProps">
+            <map>
+                <entry key="testA" value="aaa"></entry>
+                <entry key="testB">
+                    <value>BBB</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+-->
+
+
+
+</beans>

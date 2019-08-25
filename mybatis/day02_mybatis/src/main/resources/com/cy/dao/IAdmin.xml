@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespa是dao的位置-->
+<mapper namespace="com.cy.dao.IAdmin">
+    <!--配置查询结果 列名和实体类的属性名对应关系-->
+    <resultMap id="adminMap" type="com.cy.entity.Admin">
+        <!--主键对应-->
+        <id property="adminId" column="id"/>
+        <!--非主键对应-->
+        <result property="adminName" column="name"/>
+        <result property="adminAddress" column="address"/>
+        <result property="adminAge" column="age"/>
+    </resultMap>
+
+
+    <select id="findAll" resultMap="adminMap">
+        select * from admin ;
+    </select>
+</mapper>

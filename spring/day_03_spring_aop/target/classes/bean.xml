@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+<!--配置spring的ioc吧service对象配置进来-->
+    <bean id="accountService" class="com.cy.dao.impl.AccountServiceImpl"></bean>
+<!--spring中基于xml的aop配置步骤
+   1.把通知bean交给spring处理
+   2.使用aop：config标签表明aop的配置
+   3.使用aop：aspect标签表明配置切面
+            id是给切面指定一个唯一标识
+            ref指定通知类bean的id
+   4.在aop：acpect标签内使用对应标签来配置通知的类型
+            示例是让printLog方法在切入点方法执行之前执行-前置通知
+            aop:before  :表示配置前置通知
+            pointcut:指定切入点表达式
+
+   5.pointcut写法
+    关键字execution(表达式)
+    表达式
+        访问修饰符  返回值  包名.包名.包名.方法名（参数列表）
+        public void com.cy.dao.impl.AccountServiceImpl.saveAccount()
+   execution(public void com.cy.dao.impl.AccountServiceImpl.savAccount())
+   全通配写法  * *..*.*(..)
+                ..表示当前包及其子包
+                （..）有无参数均可
+           实际开发中表达式写法：  业务层实现类下所有方法 * com.cy.impl.*.*(..)
+
+    -->
+    <bean id="logger" class="com.cy.utilutils.Logger"></bean>
+    <!--配置aop-->
+    <aop:config>
+        <!--配置切面-->
+        <aop:aspect id="logAdvice" ref="logger">
+
+            <aop:pointcut id="ptf" expression="execution(* *..*.*(..))"></aop:pointcut>
+            <!--配置通知的类型，建立通知方法和切入点的连接-->
+            <aop:around method="pritLog" pointcut-ref="ptf"></aop:around>
+
+
+        </aop:aspect>
+    </aop:config>
+</beans>
