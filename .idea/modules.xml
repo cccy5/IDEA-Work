@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/IDEA-Work.iml" filepath="$PROJECT_DIR$/.idea/IDEA-Work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM_Project_Training/SSH_CRUD/SSH_CRUD.iml" filepath="$PROJECT_DIR$/SSM_Project_Training/SSH_CRUD/SSH_CRUD.iml" />
       <module fileurl="file://$PROJECT_DIR$/SSM_Project_Training/SSM_Project_Training.iml" filepath="$PROJECT_DIR$/SSM_Project_Training/SSM_Project_Training.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringMVC/SpringMVC_day_01/SpringMVC_day_01.iml" filepath="$PROJECT_DIR$/SpringMVC/SpringMVC_day_01/SpringMVC_day_01.iml" />

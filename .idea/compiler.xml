@@ -13,7 +13,6 @@
         <module name="SpringMVC_day_02_uploads" />
         <module name="SpringMVC_day_03_ssm" />
         <module name="Student" />
-        <module name="Test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,7 +23,7 @@
       <module name="SpringMVC_day_02_sysException" target="1.7" />
       <module name="SpringMVC_day_02_uploads" target="1.7" />
       <module name="SpringMVC_day_03_ssm" target="1.7" />
-      <module name="SSH_CRUD" target="1.5" />
+      <module name="SSH_CRUD" target="1.7" />
       <module name="SSM_Project_Training" target="1.7" />
       <module name="Student" target="1.7" />
       <module name="Test" target="1.7" />

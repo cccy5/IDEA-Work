@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Test</artifactId>
+    <artifactId>SSH_CRUD</artifactId>
     <packaging>pom</packaging>
 
     <name>Test Maven Webapp</name>
