@@ -11,6 +11,7 @@
     <module>Student</module>
       <module>SSH_CRUD</module>
       <module>Test</module>
+      <module>SSH_CRUD2</module>
   </modules>
   <packaging>pom</packaging>
 

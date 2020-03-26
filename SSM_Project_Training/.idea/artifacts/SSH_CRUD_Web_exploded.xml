@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SSH_CRUD:Web exploded">
+    <output-path>$PROJECT_DIR$/SSH_CRUD/target/SSH_CRUD</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="SSH_CRUD/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SSH_CRUD" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
